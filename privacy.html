@@ -24,40 +24,39 @@
     <title>staff page</title>
     <style>
 
-      @media (max-width: 768px) {
+  @media (max-width: 768px) {
         .navbar-toggler {
-           background-color: white;}
+           background-color: black}
           img{
             width: 100%;
           }
-}
+  }
+  .navbar-nav .nav-item .nav-link{
+    color: rgb(17, 17, 17);
+  }
   body{
-    background-image: url(./images/staff/staffbg.jpg);
+    background-image: url(./images/staff/privacy.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     opacity: .9;
-    color: white;
+    color: rgb(42, 41, 41);
   }
   th,td{
-    color: white;
+    color: rgb(58, 3, 3);
   }
   a{
     text-decoration: none;
   }
   a:hover{
-    color: rgb(169, 119, 216);
+    color: rgb(136, 27, 238);
     text-decoration: none;
     font-weight: 700;
   }
-  h2{color: aqua; text-align: center;}
-  .navbar-nav .nav-item .nav-link{
-    color: rgb(225, 248, 55);
-  }
-  .navbar-nav .nav-item .nav-link{
-    color: rgb(225, 248, 55);
-  }
-
+  h2{color: rgb(11, 201, 201);}
+.activity{
+  color: rgb(71, 67, 5);
+}
     </style>
   </head>
   <body>
@@ -129,7 +128,7 @@
     <body>
     <main>
     <div class="container mt-1 pt-1">
-      <h1>Haukai Restaurant Staff information</h1>
+      <h2>Haukai Restaurant Staff Roster</h2>
       <div class="row">
         <div class="col-md-12">
           <table class="table" style="width:100%">
@@ -168,33 +167,33 @@
      
       <!-- 1 -->
         <!-- <div class="row"> -->
-          <h2>contact phone number</h2>
+          <div class="container mt-1 pt-1">
+          <h2>Staff contact</h2>
           <div class="row">
             <div class="col-md-4">
-            <img src="./images/staff/staff1.png" alt="connie Lee" width="350px" height="400px">
+            <img src="./images/staff/staff1.png" alt="connie Lee" width="300px" height="400px" title="connie Lee">
             <h3>Connoie Lee</h3>
             <p>I am so happy to work with our teams</p>
             <p>phone: 0210220987</p>
             <p><button class="button"><a href="mailto:connieLee@gmail.com">Send Email</a></button></p>
             </div>
-        <div class="col-md-4">
-          <img src="./images/staff/chef2.png" alt="Anna Jundr"  width="350px" height="400px" >
-          <h3>Anna Jundr</h3>
-          <p>It is my dream to be an excellent chef</p>
-          <p>phone: 0220340987</p>
-          <p><button class="button"><a href="mailto:Anna123@hotmail.com">Send Email</a></button></p>
-      </div>
-      <div class="col-md-4">
-        <img src="./images/staff/chef1.png" alt="James white"  width="350px" height="400px">
-        <h3>James white</h3>
-        <p>Make the best dishes for customers</p>
-        <p>phone: 0244789224</p>
-        <p><button class="button"><a href="mailto:JamesWhite1122@gmail.com">Send Email</a></button></p>
-      </div>
-    </div>
+          <div class="col-md-4">
+            <img src="./images/staff/chef2.png" alt="Anna Jundr"  width="300px" height="400px" title="Anna Jundr">
+            <h3>Anna Jundr</h3>
+            <p>It is my dream to be an excellent chef</p>
+            <p>phone: 0220340987</p>
+            <p><button class="button"><a href="mailto:Anna123@hotmail.com">Send Email</a></button></p>
+          </div>
+          <div class="col-md-4">
+            <img src="./images/staff/chef1.png" alt="James white"  width="300px" height="400px" title="James white">
+            <h3>James white</h3>
+            <p>Make the best dishes for customers</p>
+            <p>phone: 0244789224</p>
+            <p><button class="button"><a href="mailto:JamesWhite1122@gmail.com">Send Email</a></button></p>
+          </div>
        <!-- 2 -->
        <h2>Recently Activity</h2>
-       <div class="row">
+       <div class="row activity">
         <div class="col-md-4">
           <h3>Company Function</h3>
           <p>2023/3/5 Howi company will have an event in our restaurant.</p>
@@ -225,7 +224,7 @@
         </div>
      
     </div>
-    <!-- </div> -->
+          </div>
   </div>
 </main>
   <!-- footer section -->
