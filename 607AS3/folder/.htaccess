@@ -1,6 +1,0 @@
-AuthName "Secure directory"
-AuthType Basic
-AuthUserFile D:\PHP\UniformServer\UniformServer\UniServerZ\www\607AS3\folder\.htpasswd
-<Files privacy.html>
-require valid-user
-</Files>
