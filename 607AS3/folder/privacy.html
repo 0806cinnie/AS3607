@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+   <!-- google fonts  -->
+   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"/>
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+   <!-- link to local css -->
+   <link rel="stylesheet" href="style.css"/>
+    <!-- jquery js -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <!-- Popper.js -->
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.6/dist/umd/popper.min.js" integrity="sha384-8jKkM5SjcZV7lwKw8GJtRlYYtJhPoDnKcgQ8WLdHq3Z3n3oOJ39WZY8iFnhqZWWg" crossorigin="anonymous"></script>
+   <!-- bootstrap js -->
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+   <!-- Bootstrap Datepicker CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" />
+   <!-- Bootstrap Datepicker JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous"></script>
+    <title>staff page</title>
+    <style>
+
+      @media (max-width: 768px) {
+        .navbar-toggler {
+           background-color: white;}
+          img{
+            width: 100%;
+          }
+}
+  body{
+    background-image: url(./images/staff/staffbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    opacity: .9;
+    color: white;
+  }
+  th,td{
+    color: white;
+  }
+  a{
+    text-decoration: none;
+  }
+  a:hover{
+    color: rgb(169, 119, 216);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  h2{color: aqua; text-align: center;}
+
+    </style>
+  </head>
+  <body>
+    <!-- header section -->
+    <header>
+      <!-- create a nav bar  -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-azure">
+        <a class="navbar-brand"
+          href="index.html"
+          style="color: purple; font-weight: 700">THE HAUKAI Resturant</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Hour.html">Hour</a>
+            </li>
+           <!-- create a dropdown list menu -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle"
+                href="Menu.html"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+                Menu
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Menu.html">APPETIZERS</a>
+                <a class="dropdown-item" href="Main.html">MAIN</a>
+                <a class="dropdown-item" href="dessert.html">DESSERT</a>
+                <a class="dropdown-item" href="beverage.html">BEVERAGES</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Reservations.html">Reservations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="gallery.html">GALLERY</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <body>
+    <main>
+    <div class="container mt-1 pt-1">
+      <h1>Haukai Restaurant Staff information</h1>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table" style="width:100%">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>work days</th>
+                <th>time roster</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Connie Lee</td>
+                <td>Manager</td>
+                <td>Monday, Tuesday, Wednesday, Saturday, Sunday</td>
+                <td>8am to 1pm & 4pm to 8.30pm</td>
+              </tr>
+              <tr>
+                <td>Anna Jundr</td>
+                <td>Junior Chef</td>
+                <td>Monday, Tuesday, Thrusday, Friday, Saturday, Sunday</td>
+                <td>8am to 3pm & 4pm to 8.30pm</td>
+              </tr>
+              <tr>
+                <td>James white</td>
+                <td>High Chef</td>
+                <td>Tuesday, Wednesday, Thrusday, Friday, Saturday, Sunday</td>
+                <td>7am to 2pm & 5pm to 9.30pm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+      </div>
+     
+      <!-- 1 -->
+        <!-- <div class="row"> -->
+          <h2>contact phone number</h2>
+          <div class="row">
+            <div class="col-md-4">
+            <img src="./images/staff/staff1.png" alt="connie Lee" width="350px" height="400px">
+            <h3>Connoie Lee</h3>
+            <p>I am so happy to work with our teams</p>
+            <p>phone: 0210220987</p>
+            <p><button class="button"><a href="mailto:connieLee@gmail.com">Send Email</a></button></p>
+            </div>
+        <div class="col-md-4">
+          <img src="./images/staff/chef2.png" alt="Anna Jundr"  width="350px" height="400px" >
+          <h3>Anna Jundr</h3>
+          <p>It is my dream to be an excellent chef</p>
+          <p>phone: 0220340987</p>
+          <p><button class="button"><a href="mailto:Anna123@hotmail.com">Send Email</a></button></p>
+      </div>
+      <div class="col-md-4">
+        <img src="./images/staff/chef1.png" alt="James white"  width="350px" height="400px">
+        <h3>James white</h3>
+        <p>Make the best dishes for customers</p>
+        <p>phone: 0244789224</p>
+        <p><button class="button"><a href="mailto:JamesWhite1122@gmail.com">Send Email</a></button></p>
+      </div>
+    </div>
+       <!-- 2 -->
+       <h2>Recently Activity</h2>
+       <div class="row">
+        <div class="col-md-4">
+          <h3>Company Function</h3>
+          <p>2023/3/5 Howi company will have an event in our restaurant.</p>
+          <p>Total: 10 person</p>
+          <p>StratTime: 6pm</p>
+        </div>
+          <div class="col-md-4">
+          <h3>Birthday Party</h3>
+          <p>2023/4/10 Jone family will have an event in our restaurant.</p>
+          <p>Total: 8 person</p>
+          <p>StratTime: 5pm</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Travel agency group</h3>
+          <p>2023/5/15 Bays company will have an event in our restaurant.</p>
+          <p>Total: 20 person</p>
+          <p>StratTime: 6.30pm</p>
+        </div>
+      </div>
+       <!-- 3 -->
+       <h2>Our Team</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="./images/staff/team_member.png" alt="team member"  height="300px">
+        </div>
+        <div class="col-md-6">
+            <img src="./images/staff/team_member3.png" alt="team member" height="300px">
+        </div>
+     
+    </div>
+    <!-- </div> -->
+  </div>
+</main>
+  <!-- footer section -->
+<footer>
+  <div class="container">
+      <div class="row mt-1 pt-1">
+          <div class="col-md-3">
+              <h4>Contact Us</h4>
+             <p>09 401 4019</p>
+          </div>
+          <div class="col-md-4">
+              <h4>Address</h4>
+                  <p>1 Island Street Kerikeri, Bay of Islands</p>
+          </div>
+          <div class="col-md-3">
+                  <h4>Opening Hours</h4>
+                  <p>we only open 5pm-10pm from Wednesday to Sunday inclusive.</p>
+          </div>
+          <div class="col-md-2">
+              <p>&copy; 2023 by Cinnie</p>
+          </div>
+      </div>
+  </div>
+</footer>
+  </body>
+
+</html>
