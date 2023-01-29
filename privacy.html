@@ -23,40 +23,48 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous"></script>
     <title>staff page</title>
     <style>
-
-  @media (max-width: 768px) {
-        .navbar-toggler {
-          background-color: rgb(18, 230, 234)}
-          img{
-            width: 100%;
-          }
-  }
-  .navbar-nav .nav-item .nav-link{
-    color: rgb(17, 17, 17);
-  }
-  body{
-    background-image: url(./images/staff/privacy.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    opacity: .9;
-    color: rgb(42, 41, 41);
-  }
-  th,td{
-    color: rgb(58, 3, 3);
-  }
-  a{
-    text-decoration: none;
-  }
-  a:hover{
-    color: rgb(136, 27, 238);
-    text-decoration: none;
-    font-weight: 700;
-  }
-  h2{color: rgb(11, 201, 201);}
-.activity{
-  color: rgb(71, 67, 5);
-}
+    /* media query when screen <991.98px navbar color will change and iFrame width will be 100%*/
+    @media (max-width: 991.98px) {
+          .navbar-toggler {
+            background-color: rgb(18, 230, 234)}
+            img{
+              width: 100%;
+            }
+    }
+    /* set navigation bar color */
+    .navbar-nav .nav-item .nav-link{
+      color: rgb(17, 17, 17);
+    }
+    /* set body style */
+    body{
+      background-image: url(./images/staff/privacy.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      opacity: .9;
+      color: rgb(42, 41, 41);
+    }
+    /* set th and td color style */
+    th,td{
+      color: rgb(58, 3, 3);
+    }
+    /* set a link style  */
+    a{
+      text-decoration: none;
+    }
+    /* set style of hover the link */
+    a:hover{
+      color: rgb(136, 27, 238);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    /* set h2 style  */
+    h2{color: rgb(11, 201, 201);
+    }
+    /* set class ='activity' style  */
+    .activity{
+      color: rgb(71, 67, 5);
+    }
     </style>
   </head>
   <body>
@@ -67,6 +75,7 @@
         <a class="navbar-brand"
           href="index.html"
           style="color: purple; font-weight: 700">THE HAUKAI Resturant</a>
+        <!-- used WAI-ARIA rule  -->
         <button
           class="navbar-toggler"
           type="button"
@@ -74,13 +83,13 @@
           data-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
+              <!-- used WAI-ARIA rule role='button' -->
               <a class="nav-link" href="index.html" role="button">Home</a>
             </li>
             <li class="nav-item">
@@ -102,6 +111,7 @@
               >
                 Menu
               </a>
+                <!-- use WAI-ARIA rule role='menu' -->
               <div class="dropdown-menu" aria-labelledby="navbarDropdown" role="menu">
                 <a class="dropdown-item" href="Menu.html">APPETIZERS</a>
                 <a class="dropdown-item" href="Main.html">MAIN</a>
@@ -109,6 +119,7 @@
                 <a class="dropdown-item" href="beverage.html">BEVERAGES</a>
               </div>
             </li>
+              <!-- used WAI-ARIA rule -->
             <li class="nav-item">
               <a class="nav-link" href="Reservations.html" role="button">Reservations</a>
             </li>
@@ -126,7 +137,9 @@
       </nav>
     </header>
     <body>
+      <!-- main section -->
     <main>
+      <!-- use bootstrap layout ,create a container for staff roster-->
     <div class="container mt-1 pt-1">
       <h2>Haukai Restaurant Staff Roster</h2>
       <div class="row">
@@ -164,7 +177,7 @@
         </div>
         </div>
     </div>
-      <!-- staff contact-->
+      <!-- use bootstrap layout,create a container for  staff contact -->
     <div class="container mt-1 pt-1">
           <h2>Staff contact</h2>
           <div class="row">
@@ -175,22 +188,21 @@
             <p>phone: 0210220987</p>
             <p><button class="button"><a href="mailto:connieLee@gmail.com">Send Email</a></button></p>
             </div>
-            <div class="col-md-4">
-              <img src="./images/staff/chef2.png" alt="Anna Jundr"  width="300px" height="400px" title="Anna Jundr">
-              <h3>Anna Jundr</h3>
-              <p>It is my dream to be an excellent chef</p>
-              <p>phone: 0220340987</p>
-              <p><button class="button"><a href="mailto:Anna123@hotmail.com">Send Email</a></button></p>
-            </div>
-            <div class="col-md-4">
-              <img src="./images/staff/chef1.png" alt="James white"  width="300px" height="400px" title="James white">
-              <h3>James white</h3>
-              <p>Make the best dishes for customers</p>
-              <p>phone: 0244789224</p>
-              <p><button class="button"><a href="mailto:JamesWhite1122@gmail.com">Send Email</a></button></p>
-            </div>
+          <div class="col-md-4">
+            <img src="./images/staff/chef2.png" alt="Anna Jundr"  width="300px" height="400px" title="Anna Jundr">
+            <h3>Anna Jundr</h3>
+            <p>It is my dream to be an excellent chef</p>
+            <p>phone: 0220340987</p>
+            <p><button class="button"><a href="mailto:Anna123@hotmail.com">Send Email</a></button></p>
           </div>
-          <!-- recently activity section -->
+          <div class="col-md-4">
+            <img src="./images/staff/chef1.png" alt="James white"  width="300px" height="400px" title="James white">
+            <h3>James white</h3>
+            <p>Make the best dishes for customers</p>
+            <p>phone: 0244789224</p>
+            <p><button class="button"><a href="mailto:JamesWhite1122@gmail.com">Send Email</a></button></p>
+          </div>
+          <!-- recently activity -->
           <h2>Recently Activity</h2>
           <div class="row activity">
             <div class="col-md-4">
@@ -199,7 +211,7 @@
               <p>Total: 10 person</p>
               <p>StratTime: 6pm</p>
             </div>
-            <div class="col-md-4">
+              <div class="col-md-4">
               <h3>Birthday Party</h3>
               <p>2023/4/10 Jone family will have an event in our restaurant.</p>
               <p>Total: 8 person</p>
@@ -212,15 +224,16 @@
               <p>StratTime: 6.30pm</p>
             </div>
           </div>
-          <!-- our teamsection-->
+          <!-- our team-->
           <h2>Our Team</h2>
           <div class="row">
+          <div class="col-md-6">
+            <img src="./images/staff/team_member.png" alt="team member"  height="300px">
+            </div>
             <div class="col-md-6">
-              <img src="./images/staff/team_member.png" alt="team member"  height="300px">
-              </div>
-              <div class="col-md-6">
-                  <img src="./images/staff/team_member3.png" alt="team member" height="300px">
-              </div>
+                <img src="./images/staff/team_member3.png" alt="team member" height="300px">
+            </div>
+        
           </div>
     </div>
    </main>
@@ -246,6 +259,5 @@
         </div>
     </div>
   </footer>
-    </body>
-
-  </html>
+ </body>
+</html>
