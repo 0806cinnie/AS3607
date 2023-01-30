@@ -14,7 +14,7 @@
     <!-- jquery js -->
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
    <!-- Popper.js -->
-   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.6/dist/umd/popper.min.js" integrity="sha384-8jKkM5SjcZV7lwKw8GJtRlYYtJhPoDnKcgQ8WLdHq3Z3n3oOJ39WZY8iFnhqZWWg" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.17.0/dist/umd/popper.min.js" integrity="sha384-93h0jKwjB7Qz4vxlx+1zDRJd+jKmQrvDA8KjOKLc5w5ZbN/Ov1xWb/ayy9DArI7K" crossorigin="anonymous"></script>
    <!-- bootstrap js -->
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
    <!-- Bootstrap Datepicker CSS -->
@@ -23,17 +23,6 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous"></script>
     <title>staff page</title>
     <style>
-    /* media query when screen <991.98px navbar color will change and iFrame width will be 100%*/
-    @media (max-width: 991.98px) {
-          .navbar-toggler {
-            background-color: rgb(18, 230, 234)}
-            img{
-              width: 100%;
-            }
-            h2{
-              text-align: center;
-            }
-    }
     /* set navigation bar color */
     .navbar-nav .nav-item .nav-link{
       color: rgb(17, 17, 17);
@@ -53,7 +42,7 @@
     }
     /* set tr hover style */
     tr:hover{
-       background-color: rgb(172, 255, 227);
+      background: linear-gradient(rgb(161, 161, 234), rgb(248, 201, 209));
     }
     /* set a link style  */
     a{
@@ -66,7 +55,8 @@
       font-weight: 700;
     }
     /* set h2 style  */
-    h2{color: rgb(11, 201, 201);
+    h2{
+      color: rgb(11, 201, 201);
       text-shadow: 0.03em 0.03em #333;
       text-align: center;
     }
@@ -74,9 +64,85 @@
     .activity{
       color: rgb(71, 67, 5);
     }
+    /* set Recently Activity hover style */
     .con:hover{
-      background-color: rgb(109, 238, 219);
+      background: linear-gradient(rgb(161, 161, 234), rgb(248, 201, 209));
     }
+   /* set Staff contact style in flex box style: The display mode of the element is set to flex, and it is arranged vertically, and the alignment of the child elements is centered*/
+    .display-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* The display mode of the element is set to flex, the element is displayed in a new line, and the space between alignment is set in the direction of the main axis */
+    .flex-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+}
+/* set our team section for flex display and wrap */
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+}
+/* set image display in 50% */
+    .team-member {
+        width: 50%;
+}
+/* set activity section dispaly flex,nowrap and space-around,and center */
+.activity
+ {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+/* set activity width and margin */
+.con {
+  width: 100%;
+  margin: 3px;
+}
+ /* media query when screen <991.98px style:*/
+ @media (max-width: 991.98px) {
+      /* navbar background color */
+          .navbar-toggler {
+            background-color: rgb(18, 230, 234)
+            }
+            /* h2 align center */
+         h2{
+              text-align: center;
+            }
+            /* The display mode of the element is set to flex, wrapping display, width 100% and display centered */
+          .container {
+                display: flex;
+               flex-wrap: wrap;
+               width: 100%;
+               text-align: center;
+           }  
+          h3:hover{
+            color: rgb(2, 170, 100);
+          }
+          /* set image display: The image displays only one picture on a small screen and occupies one line.*/
+           .flex-col img{
+            display:inline-block;
+            width: 50%;
+            height: auto;
+           }
+            .team-member{
+              width: 100%;
+              flex-wrap: wrap;
+            }
+            .team-member img{
+            width: 100%;
+            overflow: hidden;
+            height: auto;
+           }
+           /* hide one image when small screen */
+           .team-member:last-child{
+            display: none;
+           }   
+}
     </style>
   </head>
   <body>
@@ -148,111 +214,111 @@
         </div>
       </nav>
     </header>
-    <body>
-      <!-- main section -->
-    <main>
-      <!-- use bootstrap layout ,create a container for staff roster-->
-    <div class="container mt-1 pt-1">
-      <h2>Haukai Restaurant Staff Roster</h2>
-      <div class="row">
-        <div class="col-md-12">
-          <table class="table" style="width:100%">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Role</th>
-                <th>work days</th>
-                <th>time roster</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Connie Lee</td>
-                <td>Manager</td>
-                <td>Monday, Tuesday, Wednesday, Saturday, Sunday</td>
-                <td>8am to 1pm & 4pm to 8.30pm</td>
-              </tr>
-              <tr>
-                <td>Anna Jundr</td>
-                <td>Junior Chef</td>
-                <td>Monday, Tuesday, Thrusday, Friday, Saturday, Sunday</td>
-                <td>8am to 3pm & 4pm to 8.30pm</td>
-              </tr>
-              <tr>
-                <td>James white</td>
-                <td>High Chef</td>
-                <td>Tuesday, Wednesday, Thrusday, Friday, Saturday, Sunday</td>
-                <td>7am to 2pm & 5pm to 9.30pm</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        </div>
+    <body style="display: flex; flex-direction: column;">
+        <!-- main section -->
+        <main>
+         <h2>Haukai Restaurant Staff Roster</h2>
+          <!-- use bootstrap layout and flex box layout to create a container for staff roster-->
+          <div class="container mt-1 pt-1" style="display: flex;">
+            <table class="table" style="width:100%; margin-left: auto; margin-right: auto;">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Role</th>
+                  <th>Work Days</th>
+                  <th>Time Roster</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Connie Lee</td>
+                  <td>Manager</td>
+                  <td>Monday, Tuesday, Wednesday, Saturday, Sunday</td>
+                  <td>8am to 1pm & 4pm to 8.30pm</td>
+                </tr>
+                <tr>
+                  <td>Anna Jundr</td>
+                  <td>Junior Chef</td>
+                  <td>Monday, Tuesday, Thrusday, Friday, Saturday, Sunday</td>
+                  <td>8am to 3pm & 4pm to 8.30pm</td>
+                </tr>
+                <tr>
+                  <td>James White</td>
+                  <td>High Chef</td>
+                  <td>Tuesday, Wednesday, Thrusday, Friday, Saturday, Sunday</td>
+                  <td>7am to 2pm & 5pm to 9.30pm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        
+      <hr style="border-bottom: 1px solid rgb(100, 100, 100); margin: 12px;">
+     <!-- Use flexbox layout to create a container for staff contact -->
+<div class="container mt-1 pt-1 display-flex flex-wrap:nowrap">
+  <h2>Staff contact</h2> 
+    <div class="flex-row">
+      <div class="flex-col" style="border-bottom: 1px solid rgb(100, 100, 100); ">
+        <img src="./images/staff/staff1.png" alt="Connie Lee" width="300px" height="400px" title="Connie Lee">
+        <h3>Connie Lee</h3>
+        <p>I am so happy to work with our teams</p>
+        <p>Phone: 0210220987</p>
+        <p><button class="button"><a href="mailto:connieLee@gmail.com">Send Email</a></button></p>
+      </div>
+      <div class="flex-col" style="border-bottom: 1px solid rgb(100, 100, 100); ">
+        <img src="./images/staff/chef2.jpg" alt="Anna Jundr" width="300px" height="400px" title="Anna Jundr">
+        <h3>Anna Jundr</h3>
+        <p>It is my dream to be an excellent chef</p>
+        <p>Phone: 0220340987</p>
+        <p><button class="button"><a href="mailto:Anna123@hotmail.com">Send Email</a></button></p>
+      </div>
+      <div class="flex-col" style="border-bottom: 1px solid rgb(100, 100, 100);">
+        <img src="./images/staff/chef1.png" alt="James White" width="300px" height="400px" title="James White">
+        <h3>James White</h3>
+        <p>Make the best dishes for customers</p>
+        <p>Phone: 0244789224</p>
+        <p><button class="button"><a href="mailto:JamesWhite1122@gmail.com">Send Email</a></button></p>
+      </div>
     </div>
-      <!-- use bootstrap layout,create a container for  staff contact -->
-    <div class="container mt-1 pt-1">
-          <h2>Staff contact</h2>
-          <div class="row">
-            <div class="col-md-4">
-            <img src="./images/staff/staff1.png" alt="connie Lee" width="300px" height="400px" title="connie Lee">
-            <h3>Connoie Lee</h3>
-            <p>I am so happy to work with our teams</p>
-            <p>phone: 0210220987</p>
-            <p><button class="button"><a href="mailto:connieLee@gmail.com">Send Email</a></button></p>
-            </div>
-          <div class="col-md-4">
-            <img src="./images/staff/chef2.png" alt="Anna Jundr"  width="300px" height="400px" title="Anna Jundr">
-            <h3>Anna Jundr</h3>
-            <p>It is my dream to be an excellent chef</p>
-            <p>phone: 0220340987</p>
-            <p><button class="button"><a href="mailto:Anna123@hotmail.com">Send Email</a></button></p>
-          </div>
-          <div class="col-md-4">
-            <img src="./images/staff/chef1.png" alt="James white"  width="300px" height="400px" title="James white">
-            <h3>James white</h3>
-            <p>Make the best dishes for customers</p>
-            <p>phone: 0244789224</p>
-            <p><button class="button"><a href="mailto:JamesWhite1122@gmail.com">Send Email</a></button></p>
-          </div>
-          <!-- recently activity -->
-          <div class="container mt-1 pt-1">
-            <h2>Recently Activity</h2>
-            <div class="row activity">
-              <div class="col-md-4 con">
-                <h3>Company Function</h3>
-                <p>2023/3/5 Howi company will have an event in our restaurant.</p>
-                <p>Total: <strong>10</strong> person</p>
-                <p>StratTime: <strong>6pm</strong></p>
-              </div>
-                <div class="col-md-4 con">
-                <h3>Birthday Party</h3>
-                <p>2023/4/10 Jone family will have an event in our restaurant.</p>
-                <p>Total: <strong>8</strong> person</p>
-                <p>StratTime: <strong>5pm</strong></p>
-              </div>
-              <div class="col-md-4 con">
-                <h3>Travel agency group</h3>
-                <p>2023/5/15 Bays company will have an event in our restaurant.</p>
-                <p>Total: <strong>20</strong> person</p>
-                <p>StratTime: <strong>6.30pm</strong></p>
-              </div>
-            </div>
-          </div>
-          <!-- our team-->
-        <div class="container mt-1 pt-1">
-          <h2>Our Team</h2>
-          <div class="row">
-          <div class="col-md-6">
-            <img src="./images/staff/team_member.png" alt="team member"  height="300px">
-            </div>
-            <div class="col-md-6">
-                <img src="./images/staff/team_member3.png" alt="team member" height="300px">
-            </div>
-        </div>
-          </div>
+  </div>
+
+  <!-- Use flexbox layout to create a container for activity section -->
+ <h2>Recently Activity</h2>
+<div class="container mt-1 pt-1">
+    <div class="row activity d-flex flex-wrap">
+      <div class="col-md-3 con" style="border-bottom: 1px solid rgb(100, 100, 100); margin: 10px;">
+        <h3>Company Function</h3>
+        <p>2023/3/5 Howi company will have an event in our restaurant.</p>
+        <p>Total: <strong>10</strong> person</p>
+        <p>StratTime: <strong>6pm</strong></p>
+      </div>
+      <div class="col-md-3 con" style="border-bottom: 1px solid rgb(100, 100, 100); margin: 10px;">
+        <h3>Birthday Party</h3>
+        <p>2023/4/10 Jone family will have an event in our restaurant.</p>
+        <p>Total: <strong>8</strong> person</p>
+        <p>StratTime: <strong>5pm</strong></p>
+      </div>
+      <div class="col-md-3 con" style="border-bottom: 1px solid rgb(100, 100, 100); margin: 10px;">
+        <h3>Travel agency group</h3>
+        <p>2023/5/15 Bays company will have an event in our restaurant.</p>
+        <p>Total: <strong>20</strong> person</p>
+        <p>StratTime: <strong>6.30pm</strong></p>
+      </div>
     </div>
-   </main>
-  <!-- footer section -->
+  </div>
+ <!-- Use flexbox layout to create a container for our team section -->
+  <h2>Our Team</h2>
+  <div class="container mt-1 pt-1">
+    <div class="row team">
+      <div class="col-md-6 col-12 team-member">
+        <img src="./images/staff/team_member.png" alt="team member" height="300px">
+      </div>
+      <div class="col-md-6 col-12 team-member">
+        <img src="./images/staff/team_member3.png" alt="team member" height="300px">
+      </div>
+    </div>
+  </div>
+</main>
+   <!-- footer section -->
    <footer>
     <div class="container">
         <div class="row mt-1 pt-1">
@@ -275,5 +341,4 @@
     </div>
   </footer>
  </body>
-
 </html>
